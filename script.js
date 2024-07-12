@@ -22,13 +22,6 @@ function createPool(diceCount) {
   playSound(createSound);  // Play create sound
 }
 
-function createCustomPool() {
-  const diceCount = parseInt(document.getElementById("customDice").value, 10);
-  if (diceCount > 0) {
-    createPool(diceCount);
-  }
-}
-
 function addPool(name, diceCount) {
   const poolContainer = document.getElementById("poolsContainer");
   const poolId = `pool${++poolCounter}`;
@@ -78,18 +71,31 @@ function addPool(name, diceCount) {
   diceElement.id = `${poolId}-dice`;
 
   for (let i = 0; i < diceCount; i++) {
-    const dieElement = document.createElement("div");
-    dieElement.className = "die";
-    dieElement.textContent = "d6";
-    diceElement.appendChild(dieElement);
+    addDie(diceElement);
   }
+
+  const addButton = document.createElement("button");
+  addButton.textContent = "+";
+  addButton.className = "add-die-button";
+  addButton.onclick = () => {
+    addDie(diceElement);
+    playSound(createSound);  // Play create sound
+  };
 
   poolElement.appendChild(rollButton);
   poolElement.appendChild(deleteButton);
   poolElement.appendChild(nameElement);
   poolElement.appendChild(diceElement);
+  poolElement.appendChild(addButton);
 
   poolContainer.appendChild(poolElement);
+}
+
+function addDie(diceElement) {
+  const dieElement = document.createElement("div");
+  dieElement.className = "die";
+  dieElement.textContent = "d6";
+  diceElement.appendChild(dieElement);
 }
 
 function rollPool(poolId) {

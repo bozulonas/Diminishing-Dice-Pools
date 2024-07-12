@@ -86,3 +86,19 @@ button:hover {
 .depleted {
   color: #888;
 }
+
+.add-die-button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.add-die-button:hover {
+  background-color: #555;
+}
