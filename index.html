@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diminishing Pools</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Diminishing Pools</h1>
+    <div>
+      <button onclick="createPool(4)">Create 4d Pool</button>
+      <button onclick="createPool(6)">Create 6d Pool</button>
+      <button onclick="createPool(8)">Create 8d Pool</button>
+      <input type="number" id="customDice" placeholder="Number of dice" min="1" />
+      <button onclick="createCustomPool()">Create Custom Pool</button>
+    </div>
+    <div id="poolsContainer"></div>
+
+    <!-- Add audio elements -->
+    <audio id="createSound" src="sounds/30008__thanvannispen__stone_on_stone_impact_loud1_05.mp3"></audio>
+    <audio id="deleteSound" src="sounds/648969__atomediadesign__dying.wav"></audio>
+    <audio id="rollSound" src="sounds/560085__vartian__rolling-single-and-dual-20-sided-dice_trimmed_1.1.wav"></audio>
+    <audio id="sighSound" src="sounds/673671__davidnagel__sigh_short.wav"></audio>
+    <audio id="depleteSound" src="sounds/456965__funwithsound__short-success-sound-glockenspiel-treasure-video-game.mp3"></audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>

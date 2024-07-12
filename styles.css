@@ -1,0 +1,88 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+#poolsContainer {
+  margin-top: 20px;
+}
+
+.pool {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.poolName {
+  margin-right: 10px;
+  outline: none;
+  cursor: pointer;
+}
+
+.poolName:focus {
+  border: 1px dashed #fff;
+  padding: 2px;
+}
+
+.poolDice {
+  display: flex;
+}
+
+.die {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.5);
+}
+
+.roll {
+  animation: roll 0.5s infinite;
+}
+
+@keyframes roll {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.removed {
+  background-color: #555;
+  color: #888;
+  border: 1px solid #888;
+}
+
+.depleted {
+  color: #888;
+}
